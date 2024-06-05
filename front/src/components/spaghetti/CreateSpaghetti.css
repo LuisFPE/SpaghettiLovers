@@ -1,0 +1,5 @@
+
+form.create-spaghetti{
+    display: flex;
+    flex-direction: column;
+}
