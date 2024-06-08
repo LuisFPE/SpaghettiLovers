@@ -66,6 +66,11 @@ const createIngredient = async(ingredientData)=>{
     console.log("resultado ",result);
     return result;
 }
+const addIngredientToSpaghetti= async(idSpaghetti, idIngredient)=>{
+    const result = await fetchData("/spaghettis/"+idSpaghetti+"/ingredient","post",{ingredientId:idIngredient});
+    return result;
+}
+
 export {
     register,
     login,
@@ -74,5 +79,6 @@ export {
     createSpaghetti,
     getUserData,
     getIngredients,
-    createIngredient
+    createIngredient,
+    addIngredientToSpaghetti
 }

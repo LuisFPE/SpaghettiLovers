@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import UserContext from "../../context/userContext";
 
-import "./Register.css";
+import "./Register.scss";
 
 import icon1 from "../../assets/img/spaghetti-icon-1.png"
 import icon2 from "../../assets/img/spaghetti-icon-2.png"

@@ -1,0 +1,144 @@
+@import "../../Colors.scss";
+
+#btn-add-ingredient{
+    background-color: $verdeClaro;
+    border: 2px solid $verdeOscuro;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+#show-news{
+    height: 100%;
+    overflow-y: scroll;
+  } 
+  ::-webkit-scrollbar {
+    width: 1.5vw;
+    height: 2px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $grisOscuro;
+    border: 0px none $grisOscuro;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $grisOscuro;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: $grisOscuro;
+  }
+  ::-webkit-scrollbar-track {
+    background: $grisClaro;
+    border: 0px none $grisOscuro;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: $grisClaro;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: $grisClaro;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+// Vista para Moviles
+
+@media only screen and (max-width: 500px) {
+    #banner2{
+        width: 200%;
+        min-height: 100vh;
+        position: absolute;
+        z-index: -100;
+        top: 45vw;
+        left: -100%;
+    }
+
+    .spaghetti-card{
+        width: 100%;
+        margin-top: 60vw;
+        margin-bottom: 2vw;
+        color: white;
+    }
+
+    #spaghetti-info{
+        width: 90%;
+        max-height: 90vh;
+        height: 80vh;
+        padding-right: 10%;
+        overflow-y: scroll;
+    }
+
+    #spaghetti-info > *{
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 5vw;
+        margin-left: 5vw;
+    }
+
+    .spaghetti-card span{
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+
+    .spaghetti-card > h2{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-bottom: 0vh;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 0.3vw;
+        font-family: "Vesper Libre", serif;
+    }
+}
+
+// Vista para Tablets
+
+@media only screen and (min-width: 501px) {
+    #banner2{
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        z-index: -100;
+        top: 10vh;
+    }
+
+    .spaghetti-card{
+        width: 45%;
+        margin-left: 45%;
+        color: white;
+    }
+
+    #spaghetti-info{
+        width: 100%;
+        height: 60vh;
+        padding-right: 10%;
+        overflow-y: scroll;
+    }
+
+    .spaghetti-card span{
+        font-weight: bolder;
+        font-size: 1.25rem;
+    }
+
+    .spaghetti-card > h2{
+        margin-top: 15vh;
+        margin-bottom: 5vh;
+        text-align: center;
+        font-size: 2.5rem;
+        letter-spacing: 0.3vw;
+        font-family: "Vesper Libre", serif;
+    }
+}
+
+// Vista para computadoras
+
+@media only screen and (min-width: 900px) {
+
+}
+
+

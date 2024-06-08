@@ -1,5 +1,5 @@
 import { createSpaghetti } from "../../utils/fetch";
-import "./CreateSpaghetti.css"
+import "./CreateSpaghetti.scss"
 const CreateSpaghetti = ({onCreate})=>{
 
     const handleSubmit =async (e)=>{
@@ -18,13 +18,17 @@ const CreateSpaghetti = ({onCreate})=>{
         <form action="" className="create-spaghetti" onSubmit={handleSubmit}>
             <label htmlFor="name" >Name</label>
             <input type="text" name="name"/>
-            <label htmlFor="sauce" >Salsa (Red, White, Green)</label>
-            <input type="text" name="sauce"/>
+            <label htmlFor="sauce" >Salsa</label>
+            <select name="sauce" id="sauce">
+                <option value="Red">Roja</option>
+                <option value="White">Blanca</option>
+                <option value="Green">Verde</option>
+            </select>    
             <label htmlFor="description" >Description</label>
             <textarea name="description"></textarea>
             <label htmlFor="recipe" >Recipe</label>
             <textarea name="recipe"></textarea>
-            <button type="submit">Create</button>
+            <button type="submit" className="btn-create-sp">Crear</button>
         </form>
     )
 }

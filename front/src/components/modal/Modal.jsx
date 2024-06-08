@@ -1,5 +1,5 @@
 
-import "./Modal.css"
+import "./Modal.scss"
 const Modal = ({children,onClose}) =>{
     
     const handleStopPropagation = (e)=>{
@@ -9,7 +9,7 @@ const Modal = ({children,onClose}) =>{
         <div className="modal" onClick={onClose}>
             <div className="modal-body" onClick={handleStopPropagation}>
                 <div className="modal-header">
-                    <button onClick={onClose}>Close</button>
+                    <button onClick={onClose} className="btn-close">Cerrar</button>
                 </div>
                 {children}
             </div>

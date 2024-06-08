@@ -6,6 +6,7 @@ import Register from "./pages/register/Register";
 import SpaghettisList from "./pages/spaghetti/SpaghettisList";
 import Spaghetti from "./pages/spaghetti/Spaghetti";
 import Ingredient from "./pages/spaghetti/Ingredient";
+import Home from "./pages/home/Home";
 
 async function fetchSpaghettis(){
     const result = await getSpaghettis();
@@ -15,11 +16,15 @@ async function fetchSpaghettis(){
     return result.data;
 }
 async function fetchSpaghetti(id){
-    const result = await getSpaghetti(id);
+    const result = await getSpaghetti(id);    
     if(result.error){
         return redirect("/register");
     }
-    return result.data;
+    const ingredients = await getIngredients();
+    const spaghetti = result.data;
+    spaghetti.addingredients = ingredients.data;
+
+    return spaghetti;
 }
 async function fetchIngredients(){
     const result = await getIngredients();
@@ -37,7 +42,7 @@ const router = createBrowserRouter([
       children: [
         {
             path: "/",
-            element: <h2>Welcome to SpaghettiLovers</h2>
+            element: <Home />
         },
         {
             path: "/spaghettis",

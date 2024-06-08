@@ -1,5 +1,5 @@
 import { createIngredient } from "../../utils/fetch";
-import "./CreateIngredient.css"
+import "./CreateIngredient.scss"
 const CreateSpaghetti = ({onCreateIngredient})=>{
 
     const handleSubmit =async (e)=>{
@@ -18,7 +18,7 @@ const CreateSpaghetti = ({onCreateIngredient})=>{
             <input type="text" name="title"/>
             <label htmlFor="description" >Descripcion</label>
             <textarea name="description"></textarea>
-            <button type="submit">Create</button>
+            <button type="submit" id="btn-create-ing">Crear</button>
         </form>
     )
 }

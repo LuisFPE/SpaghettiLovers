@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Modal from "../../components/modal/Modal";
 import CreateIngredient from "../../components/ingredient/CreateIngredient";
+import "./Ingredient.scss"
 
 const Ingredient = ()=>{
     const [ingredients,setIngredients] = useState(useLoaderData());
@@ -10,22 +11,25 @@ const Ingredient = ()=>{
         return (
             <article className="ingredients-list-element" key={ingredient._id}>
                 <h3>{ingredient.title}</h3>
-                <p>{ingredient.description}</p>
+                <p className="ingredient-description">{ingredient.description}</p>
             </article>
         )
     })
     return (
         <>
-        {creatingIngredient ?
-            <Modal onClose={()=>setCreatingIngredient(false)}>
-                <CreateIngredient onCreateIngredient={()=>setCreatingIngredient(false)}/>
-            </Modal>
-            :
-            <button onClick={()=>setCreatingIngredient(true)}>Nuevo Ingrediente</button>
-        }
-            <section className="ingredient-list">
-                {ingredientsHtml}
-            </section>
+        <section id="IngredientsList">
+            {creatingIngredient ?
+                <Modal onClose={()=>setCreatingIngredient(false)} >
+                    <CreateIngredient onCreateIngredient={()=>setCreatingIngredient(false)}/>
+                </Modal>
+                :
+                <button id="btn-create2" onClick={()=>setCreatingIngredient(true)} >Nuevo Ingrediente</button>
+            }
+                <section className="ingredient-list">
+                    {ingredientsHtml}
+                </section>            
+        </section>
+
         </>
     )
 }

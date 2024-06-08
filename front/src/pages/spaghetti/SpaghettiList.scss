@@ -1,0 +1,161 @@
+@import "../../Colors.scss";
+
+// Vista para Moviles
+
+@media only screen and (max-width: 500px) {
+    #spaghettiList{
+        width: 100%;
+        margin-top: 55vw;
+        margin-bottom: 10vw;
+    }
+
+    .spaghettis-list-element{
+        width: 60%;
+        margin-top: 10vw;
+        margin-left: 15%;
+        border: 3px solid $verdeOscuro;
+        border-radius: 10px;
+        padding: 5% 5%;
+        
+    }
+
+    .spaghettis-list-element > h2,p{
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 6vw;
+    }
+
+    .btn-ver{
+        width: 10vw;
+        background-color: rgb(220, 53, 69);
+        border: 2px solid rgb(176, 42, 55);
+        border-radius: 5px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 1% 4%;
+        margin-left: 5vw;
+        font-size: 4vw;
+        margin-top: 2vh;
+        display: block;
+        text-align: center;
+    }
+
+    #btn-create{
+        width: 55vw;
+        background-color: $rojoClaro;
+        border: 2px solid $rojoOscuro;
+        border-radius: 5px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 2% 5%;
+        margin-left: 5vw;
+        margin-bottom: 0px;
+        font-size: 5vw;
+    }
+
+}
+
+// Vista para Tablets
+
+@media only screen and (min-width: 501px) {
+    #spaghettiList{
+        width: 100%;
+        margin-top: 10vh;
+        margin-bottom: 10vw;
+        
+    }
+
+    .spaghetti-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .spaghettis-list-element{
+        width: 20vw;
+        min-height: 20vh;
+        margin: 2vh 2vw;
+        border: 3px solid $verdeOscuro;
+        border-radius: 10px;
+        padding: 2% 2%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .spaghettis-list-element > h2{
+        margin: 0px;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    .spaghettis-list-element > p{
+        margin: 0px;
+        text-align: center;
+        font-size: 2.5vw;
+    }
+
+    .btn-ver{
+        width: 10vw;
+        height: 4vh;
+        background-color: rgb(220, 53, 69);
+        border: 2px solid rgb(176, 42, 55);
+        border-radius: 5px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2vw;
+    }
+
+    #btn-create{
+        width: 25vw;
+        background-color: $rojoClaro;
+        border: 2px solid $rojoOscuro;
+        border-radius: 5px;
+        color: whitesmoke;
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 1% 2vw;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        margin-bottom: 5vh;
+        font-size: 2.5vw;
+    }
+}
+
+// Vista para computadoras
+
+@media only screen and (min-width: 900px) {
+    .spaghettis-list-element{
+        width: 15vw;
+        margin: 3vh 2vw;
+        padding: 2% 1%;
+    }
+
+    .spaghettis-list-element > h2{
+        font-size: 2vw;
+    }
+
+    .spaghettis-list-element > p{
+        font-size: 1.5vw;
+    }
+
+    #btn-create{
+        width: 15vw;
+        padding: 1% 1vw;
+        font-size: 1.5vw;
+    }
+}
+
+
