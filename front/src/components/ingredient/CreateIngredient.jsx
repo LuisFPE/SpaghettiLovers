@@ -9,8 +9,8 @@ const CreateSpaghetti = ({onCreateIngredient})=>{
         const data = {title,description};
         console.log("data",data)
         const result = await createIngredient(data);
-        
         onCreateIngredient();
+        window.location.reload()
     }
     return (
         <form action="" className="create-ingredient" onSubmit={handleSubmit}>

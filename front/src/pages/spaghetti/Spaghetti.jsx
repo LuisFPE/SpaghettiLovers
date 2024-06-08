@@ -12,7 +12,7 @@ const Spaghetti = ()=>{
         const spaghetti_id = spaghetti._id;        
         const ingredientId = e.target.addingredients.value;
         const result = await addIngredientToSpaghetti(spaghetti_id,ingredientId);
-   
+        window.location.reload();
     }
 
     return (

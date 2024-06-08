@@ -13,6 +13,7 @@ const CreateSpaghetti = ({onCreate})=>{
         const result = await createSpaghetti(data);
         console.log("result",result)
         onCreate();
+        window.location.reload()
     }
     return (
         <form action="" className="create-spaghetti" onSubmit={handleSubmit}>
