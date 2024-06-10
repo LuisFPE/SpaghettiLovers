@@ -1,0 +1,19 @@
+@import "../../Colors.scss";
+
+.create-ingredient{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#btn-create-ing{
+    background-color: $verdeClaro;
+    border: 2px solid $verdeOscuro;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-weight: bolder;
+    padding: 2% 5%;
+    margin-top: 3vh;
+    height: 5vh;
+}
